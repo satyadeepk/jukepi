@@ -1120,19 +1120,19 @@
                         var model = this._views.at(0).get("view").collection.at(0);
                         var name = model.get("name");
                         var length = options.collection[0].view.collection.length;
-                        model.set("name", "Artists (" + length + ")")
+                        model.set("name", "Tracks (" + length + ")")
                     }.bind(this));
                     this.listenTo(options.collection[1].view.collection, "add remove change", function() {
                         var model = this._views.at(0).get("view").collection.at(1);
                         var name = model.get("name");
                         var length = options.collection[1].view.collection.length;
-                        model.set("name", "Albums (" + length + ")")
+                        model.set("name", "Artists (" + length + ")")
                     }.bind(this));
                     this.listenTo(options.collection[2].view.collection, "add remove change", function() {
                         var model = this._views.at(0).get("view").collection.at(2);
                         var name = model.get("name");
                         var length = options.collection[2].view.collection.length;
-                        model.set("name", "Tracks (" + length + ")")
+                        model.set("name", "Albums (" + length + ")")
                     }.bind(this));
                     TabView.prototype.initialize.call(this, options)
                 }
